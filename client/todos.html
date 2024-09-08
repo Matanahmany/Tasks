@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List With Local Storage</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            background-color: skyblue;
+        }
+
+        .container {
+            width: 30rem;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .container .title {
+            text-align: center;
+        }
+
+        .user-info {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 1rem;
+        }
+
+        .form {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 4rem;
+        }
+
+        .form input {
+            flex: 1;
+            padding: 0.7rem;
+            border: none;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .form .btn {
+            padding: 0.7rem;
+            background-color: darkblue;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        .lists .todo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .todo span {
+            cursor: pointer;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .buttons button {
+            padding: 0.7rem 1.5rem;
+            background-color: darkblue;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            margin: 0 0.5rem;
+        }
+
+        .user-info {
+            left: 1rem; /* Adjusting the left position */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="user-info">
+        <h4>Username: <span id="username"></span></h4>
+        <h4>Email: <span id="email"></span></h4>
+    </div>
+    <div class="container">
+        <h1 class="title">OOP Todo List</h1>
+        <form class="form" data-form>
+            <input type="text" placeholder="Todo..." data-input>
+            <button class="btn">Submit</button>
+        </form>
+        <div class="lists" data-lists>
+            <!-- INNERHTML -->
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="btn-save">SAVE</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+    <!-- Script -->
+    <script src="todos.js"></script>
+</body>
+
+</html>
